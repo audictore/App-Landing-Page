@@ -21,6 +21,10 @@ const componentloader = async (filePath) => {
  */
 const components = [
   '/components/header/header.html',
+  '/components/black-landing/black-landing.html',
+  '/components/destinations/destinations-text.html',
+  '/components/destinations/destinations-cards.html',
+  '/components/destinations/destinations-button.html',
 ]
 
 Promise.all(components.map(componentloader))
