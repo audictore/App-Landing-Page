@@ -20,11 +20,11 @@ const componentloader = async (filePath) => {
  * use promises all to load all components and render them
  */
 const components = [
-  '/components/header/header.html',
-  '/components/black-landing/black-landing.html',
-  '/components/destinations/destinations-text.html',
-  '/components/destinations/destinations-cards.html',
-  '/components/destinations/destinations-button.html',
+  '/src/components/header/header.html',
+  '/src/components/black-landing/black-landing.html',
+  '/src/components/destinations/destinations-text.html',
+  '/src/components/destinations/destinations-cards.html',
+  '/src/components/destinations/destinations-button.html',
 ]
 
 Promise.all(components.map(componentloader))
