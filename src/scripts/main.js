@@ -15,16 +15,21 @@ const componentloader = async (filePath) => {
   });
 }
 
+// Get the main domain to set the production environment
+const mainDomain = window.location.origin
+const production = mainDomain.includes('github')
+const env = { url: production ? '/App-Landing-Page' : '' }
+
 /*
  * Load components and render them in the root element,
  * use promises all to load all components and render them
  */
 const components = [
-  '/src/components/header/header.html',
-  '/src/components/black-landing/black-landing.html',
-  '/src/components/destinations/destinations-text.html',
-  '/src/components/destinations/destinations-cards.html',
-  '/src/components/destinations/destinations-button.html',
+  `${env.url}/src/components/header/header.html`,
+  `${env.url}/src/components/black-landing/black-landing.html`,
+  `${env.url}/src/components/destinations/destinations-text.html`,
+  `${env.url}/src/components/destinations/destinations-cards.html`,
+  `${env.url}/src/components/destinations/destinations-button.html`,
 ]
 
 Promise.all(components.map(componentloader))
