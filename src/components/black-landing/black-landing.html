@@ -1,0 +1,154 @@
+<section class="black-landing">
+  <div class="container">
+    <div>
+      <h1>Unleash the full potential of AI</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor tortor in ullamcorper bibendum. Sed elementum sem ligula, non tincidunt nisi eleifend nec. Vestibulum dignissim purus condimentum pulvinar faucibus.
+      </p>
+      <section class="actions">
+        <button>
+          <span>Get the App</span>
+          <img src="./assets/icons/arrow-right.svg" alt="">
+        </button>
+
+        <span>More</span>
+      </section>
+      <section class="stats">
+        <item>
+          <span>4.8</span>
+          <span>Rating on AppStore</span>
+        </item>
+        <item>
+          <span>700k+</span>
+          <span>Active users</span>
+        </item>
+      </section>
+    </div>
+    <div>
+      <img src="./assets/images/image-removebg.png" alt="phones images">
+    </div>
+  </div>
+</section>
+
+<style>
+  section.black-landing {
+    display: flex;
+    width: 100%;
+    padding: 1.6rem;
+
+    div.container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: var(--color-second);
+      border-radius: 4rem;
+      padding: 1.6rem 4rem;
+      width: 100%;
+      
+      div {
+        width: 50%;
+        max-width: 50%;
+
+        &:first-child {
+          display: flex;
+          flex-direction: column;
+          font-size: var(--font-size-xl);
+          font-family: var(--font-family);
+          padding: 2rem 0 0 7rem;
+
+          h1 {
+            font-weight: 500;
+            color: var(--color-third);
+          }
+
+          p {
+            font-size: var(--font-size-md);
+            color: var(--color-third);
+            font-weight: 300;
+            padding-right: 12vw;
+            margin-top: 1.2rem;
+          }
+
+          section {
+            margin-top: 3rem;
+
+            &.actions {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-start;
+
+              button {
+                padding: 0.8rem 1.6rem;
+                background: var(--color-main);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5rem;
+
+                span {
+                  font-size: var(--font-size-md);
+                }
+
+                img {
+                  margin-left: 0.8rem;
+                  width: 1.6rem;
+                  aspect-ratio: 1 / 1;
+                }
+              }
+
+              > span {
+                color: var(--color-third);
+                font-size: var(--font-size-md);
+                margin-left: 2rem;
+              }
+            }
+
+            &.stats {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: flex-start;
+
+              item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                &:first-child {
+                  margin-right: 3rem;
+                }
+
+                span {
+                  color: var(--color-third);
+
+                  &:first-child {
+                    font-size: var(--font-size-lg);
+                    font-weight: 700;
+                  }
+
+                  &:last-child {
+                    font-size: var(--font-size-sm);
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          img {
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+            height: 70vh;
+            filter: drop-shadow(0 0 4rem rgba(var(--color-third-rgb), 0.2));
+          }
+        }
+      }
+    }
+  }
+</style>
